@@ -20,4 +20,5 @@ The automatas implementation is in `Classes/Automatas`
 
 ## ToDo
 
-[] Add search in depth
+- [ ] Fix search in depth
+- [ ] support for the ability to recognize if the url does not belong to a resource like images, pdf, etc

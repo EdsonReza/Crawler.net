@@ -2,7 +2,6 @@ using Spectre.Console;
 using Cocona;
 using Crawler.Classes;
 using System.Text;
-using System;
 
 namespace Crawler.Commands;
 
@@ -18,7 +17,7 @@ public class Search
             Console.WriteLine();
             Site site = new(url, depth);
             StringBuilder mailtext = new();
-            site.Mails.ForEach(link => mailtext.AppendLine($"[lightseagreen]{link}[/]"));
+            Matches.Mails.ForEach(link => mailtext.AppendLine($"[lightseagreen]{link}[/]"));
             if (mailtext.Length > 0) {
                 var panelMails = new Panel(mailtext.ToString());
                 panelMails.Border = BoxBorder.Rounded;
@@ -28,7 +27,7 @@ public class Search
             }
             else AnsiConsole.MarkupLine("[red]No mail matches found \n[/]");
             StringBuilder urltext = new();
-            site.Links.ForEach(link => urltext.AppendLine($"[lightseagreen]{link}[/]"));
+            Matches.Links.ForEach(link => urltext.AppendLine($"[lightseagreen]{link}[/]"));
             if (urltext.Length > 0)
             {
                 var panelLinks = new Panel(urltext.ToString());
