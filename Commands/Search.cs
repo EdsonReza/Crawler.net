@@ -9,7 +9,7 @@ public class Search
 {
 
     [Command(Description = "Get the URL and crawl it")]
-    public static void Crawl([Argument(Description = "Target to be crawled")]string url, [Option('d', Description = "Depth of the crawl")]int depth = 3)
+    public static void Crawl([Argument(Description = "Target to be crawled")]string url, [Option('d', Description = "Depth of the crawl")]int depth = 1)
     {
         Console.WriteLine();
         AnsiConsole.Write(new Rule($"[gold1]Crawling[/] [royalblue1]{url}[/]").LeftJustified());
