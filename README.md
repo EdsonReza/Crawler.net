@@ -14,3 +14,6 @@ dotnet run -- https://google.com/
 ```
 
 The automatas implementation is in `Classes/Automatas`
+
+## ToDo
+[] Add search in depth
